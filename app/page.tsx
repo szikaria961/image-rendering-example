@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="text-green-500">I am the home page</div>
+    <div className="font-bold">Image Rendering Example in NextJS</div>
   )
 }
 
