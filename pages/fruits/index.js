@@ -1,6 +1,7 @@
 function  FruitsList({ fruits }) {
   return (
     <>
+      <h1>List of Fruits</h1>
       {fruits.map(fruit => {
         return (
           <p key={fruit.id}>
