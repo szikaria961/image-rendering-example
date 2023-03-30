@@ -1,4 +1,5 @@
 // import React, { useEffect, useState } from 'react';
+import Link from 'next/link'
 
 
 function  FruitsList({ fruits }) {
@@ -15,14 +16,17 @@ function  FruitsList({ fruits }) {
   }, [])
   console.log(names);
   */
+  const { id } = fruits || {}
   return (
     <>
       <h1>List of Fruits</h1>
       {fruits.map(fruit => {
         return (
+          <Link key={fruit.id} href= {`/fruits/${fruit.id}`}>
           <p key={fruit.id}>
             Name: {fruit.name} - Sugar: {fruit.nutritions.sugar} - Calories: {fruit.nutritions.calories}
           </p>
+          </Link>
         )
       })
       }
